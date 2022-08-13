@@ -20,7 +20,7 @@ class Install
         $config = include $config_file;
         if(!in_array(ThinkOrm::class , $config ?? [])) {
             $config_file_content = file_get_contents($config_file);
-            $config_file_content = preg_replace('/\];/', "    Webman\ThinkOrm\ThinkOrm::class,\n];", $config_file_content);
+            $config_file_content = preg_replace('/\];/', "    d2wd\ThinkOrm\ThinkOrm::class,\n];", $config_file_content);
             file_put_contents($config_file, $config_file_content);
         }
         $thinkorm_file = config_path() . '/think_db_config.php';
@@ -41,7 +41,7 @@ class Install
         if(in_array(ThinkOrm::class, $config ?? [])) {
             $config_file = config_path() . '/bootstrap.php';
             $config_file_content = file_get_contents($config_file);
-            $config_file_content = preg_replace('/ {0,4}Webman\\\\ThinkOrm\\\\ThinkOrm::class,?\r?\n?/', '', $config_file_content);
+            $config_file_content = preg_replace('/ {0,4}d2wd\\\\ThinkOrm\\\\ThinkOrm::class,?\r?\n?/', '', $config_file_content);
             file_put_contents($config_file, $config_file_content);
         }
         $thinkorm_file = config_path() . '/think_db_config.php';
