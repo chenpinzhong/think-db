@@ -21,7 +21,7 @@ class ThinkOrm implements Bootstrap
                 if (!class_exists(Mysql::class, false)) {
                     return;
                 }
-                $connections = config('thinkorm.connections', []);
+                $connections = config('think_db_config.connections', []);
                 foreach ($connections as $key => $item) {
                     if ($item['type'] == 'mysql') {
                         try {

@@ -23,9 +23,9 @@ class Install
             $config_file_content = preg_replace('/\];/', "    Webman\ThinkOrm\ThinkOrm::class,\n];", $config_file_content);
             file_put_contents($config_file, $config_file_content);
         }
-        $thinkorm_file = config_path() . '/thinkorm.php';
+        $thinkorm_file = config_path() . '/think_db_config.php';
         if (!is_file($thinkorm_file)) {
-            copy(__DIR__ . '/config/thinkorm.php', $thinkorm_file);
+            copy(__DIR__ . '/config/think_db_config.php', $thinkorm_file);
         }
         static::installByRelation();
     }
@@ -44,7 +44,7 @@ class Install
             $config_file_content = preg_replace('/ {0,4}Webman\\\\ThinkOrm\\\\ThinkOrm::class,?\r?\n?/', '', $config_file_content);
             file_put_contents($config_file, $config_file_content);
         }
-        $thinkorm_file = config_path() . '/thinkorm.php';
+        $thinkorm_file = config_path() . '/think_db_config.php';
         if (is_file($thinkorm_file)) {
             unlink($thinkorm_file);
         }
