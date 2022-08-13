@@ -10,5 +10,6 @@
     "psr-4": {
       "Webman\\ThinkOrm\\": "src"
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
