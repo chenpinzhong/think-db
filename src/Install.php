@@ -1,5 +1,5 @@
 <?php
-namespace Webman\ThinkOrm;
+namespace d2wd\ThinkOrm;
 
 class Install
 {
