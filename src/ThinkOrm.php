@@ -1,6 +1,6 @@
 <?php
 
-namespace Webman\ThinkOrm;
+namespace d2wd\ThinkOrm;
 
 use Webman\Bootstrap;
 use Workerman\Timer;
