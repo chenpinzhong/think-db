@@ -19,10 +19,5 @@
       "src/topthink/think-orm/stubs/load_stubs.php",
       "src/topthink/think-helper/src/helper.php"
     ]
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
   }
 }
